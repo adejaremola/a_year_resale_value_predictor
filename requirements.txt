@@ -2,3 +2,4 @@ streamlit
 scikit-learn
 numpy
 pickle4
+category_encoders
