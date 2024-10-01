@@ -1,6 +1,7 @@
 import pickle
 import streamlit as st
 import numpy as np
+import pandas as pd
 
 # Load your model file
 with open('model.pkl', 'rb') as f:
@@ -21,7 +22,11 @@ curb_weight = st.slider("Curb Weight", min_value=1, max_value=5, value=2)
 
 # When the 'Predict' button is clicked
 if st.button("Predict"):
-    # Make prediction using the input values
-    input_data = [manufacturer, price_in_thousands, curb_weight]  # Collect the input features
-    prediction = model.predict(np.array([input_data]))
+    # Prepare the input data as a DataFrame (since pipelines often expect a DataFrame)
+    input_data = pd.DataFrame({
+        'Manufacturer': [manufacturer],
+        'Price_in_thousands': [price_in_thousands],
+        'Curb_weight': [curb_weight]
+    })
+    prediction = model.predict(input_data)
     st.write(f'The predicted value is: {prediction} thousand dollars')
