@@ -1,4 +1,4 @@
-
+import pickle
 # Load your model file
 with open('model.pkl', 'rb') as f:
     model = pickle.load(f)
