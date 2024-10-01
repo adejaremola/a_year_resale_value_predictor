@@ -1,4 +1,4 @@
-import pickle4 as pickle
+import pickle
 import streamlit as st
 # Load your model file
 with open('model.pkl', 'rb') as f:
