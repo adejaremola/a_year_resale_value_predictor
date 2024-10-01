@@ -28,5 +28,5 @@ if st.button("Predict"):
         'Price_in_thousands': [price_in_thousands],
         'Curb_weight': [curb_weight]
     })
-    prediction = model.predict(input_data)[0]
+    prediction = model.predict(input_data)[0].round(2)
     st.write(f'The predicted value is: {prediction} thousand dollars')
