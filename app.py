@@ -12,8 +12,7 @@ manufacturer = st.selectbox(
     ["Dodge", "Ford", "Mercedes-B", "Toyota", "Chevrolet", "Nissan", "Chrysler", "Mitsubishi", 
      "Volvo", "Oldsmobile", "Lexus", "Mercury", "Pontiac", "Volkswagen", "Saturn", "Cadillac", 
      "Honda", "Plymouth", "Acura", "Buick", "Audi", "Jeep", "Porsche", "Hyundai", "BMW", "Lincoln", 
-     "Saab", "Subaru", "Jaguar", "Infiniti"], 
-    value="Ford"
+     "Saab", "Subaru", "Jaguar", "Infiniti"]
 )
 price_in_thousands = st.slider("Price_in_thousands", min_value=3, max_value=53, value=26)
 curb_weight = st.slider("Curb_weight", min_value=1.895, max_value=4.9825, value=2)
