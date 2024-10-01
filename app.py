@@ -15,7 +15,7 @@ manufacturer = st.selectbox(
      "Saab", "Subaru", "Jaguar", "Infiniti"]
 )
 price_in_thousands = st.slider("Price (thousand dollars)", min_value=3, max_value=53, value=26)
-curb_weight = st.slider("Curb_weight", min_value=1, max_value=5, value=2)
+curb_weight = st.slider("Curb Weight", min_value=1, max_value=5, value=2)
 
 # When the 'Predict' button is clicked
 if st.button("Predict"):
